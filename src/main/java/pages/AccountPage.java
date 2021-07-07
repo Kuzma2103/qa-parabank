@@ -11,9 +11,9 @@ public class AccountPage extends BasePage {
 
     public OpenNewAccountMethod method;
 
-    public AccountPage openAccount() {
+    public AccountPage openAccount() throws InterruptedException {
         method = new OpenNewAccountMethod(driver);
-        method.openAccount();
+        method.openUserAccount();
         return this;
     }
 

@@ -9,9 +9,10 @@ public class OpenNewAccountTest extends BaseTestWithLogin {
     public AccountPage accountPage;
 
     @Test
-    public void openAccount() {
+    public void openAccount() throws InterruptedException {
         accountPage = new AccountPage(driver);
         accountPage.openAccount();
+
         try {
             accountPage.openAccountVerification();
             System.out.print("The new account is open.");
