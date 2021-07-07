@@ -19,6 +19,8 @@ public class RegistrationData {
         data.add(faker.number().digits(13)); // 7 Social security number SSN
         data.add(faker.name().username()); // 8 Username
         data.add(faker.internet().password()); // 9 Password
+        data.add(faker.internet().emailAddress()); // 10 Email address
+        data.add(faker.chuckNorris().fact()); // 11 Message
 
         return data;
     }
