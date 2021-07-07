@@ -11,6 +11,13 @@ public class PropertyManager {
     private static String url;
 
     // User data
+    private static String firstName;
+    private static String lastName;
+    private static String address;
+    private static String city;
+    private static String state;
+    private static String zipCode;
+    private static String ssn;
     private static String username;
     private static String password;
 
@@ -33,12 +40,30 @@ public class PropertyManager {
         return instance;
     }
 
-    public static void setUserData(String username, String password) {
+
+    public static void setUserData(
+            String firstName,
+            String lastName,
+            String address,
+            String city,
+            String state,
+            String zipCode,
+            String ssn,
+            String username,
+            String password
+    ) {
         Properties properties = new Properties();
         File file = new File("src/main/resources/registration.properties");
 
         try {
             FileOutputStream output = new FileOutputStream(file);
+            properties.setProperty("firstName", firstName);
+            properties.setProperty("lastName", lastName);
+            properties.setProperty("address", address);
+            properties.setProperty("city", city);
+            properties.setProperty("state", state);
+            properties.setProperty("zipCode", zipCode);
+            properties.setProperty("ssn", ssn);
             properties.setProperty("username", username);
             properties.setProperty("password", password);
             properties.store(output, "Faker registration data");
@@ -60,19 +85,54 @@ public class PropertyManager {
             e.printStackTrace();
         }
 
+        firstName = properties.getProperty("firstName");
+        lastName = properties.getProperty("lastName");
+        address = properties.getProperty("address");
+        city = properties.getProperty("city");
+        state = properties.getProperty("state");
+        zipCode = properties.getProperty("zipCode");
+        ssn = properties.getProperty("ssn");
         username = properties.getProperty("username");
         password = properties.getProperty("password");
 
         return data;
     }
 
-    // Geters
+    // Getters
     public String getDriverPath() {
         return driverPath;
     }
 
     public String getUrl() {
         return url;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public String getZipCode() {
+        return zipCode;
+    }
+
+    public String getSsn() {
+        return ssn;
     }
 
     public String getUsername() {
