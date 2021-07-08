@@ -17,7 +17,7 @@ public class BaseTestWithLogin {
     public HomePage homePage;
 
     @Before
-    public void setup() {
+    public void setup() throws InterruptedException {
         options = new ChromeOptions();
 
         // Disable browser notifications

@@ -1,25 +1,11 @@
 
 T
 $src/main/java/pages/AccountPage.java,1\9\19fc3981e631d417dee8150a78cbecc3f4f8c9bf
-_
-/src/main/java/methods/OpenNewAccountMethod.java,c\f\cfcc1658b9efe9246f29d6bf8e0501df38686ff5
 X
 (src/main/java/methods/ContactMethod.java,7\8\78b0bc0f67f729c88d8b4589af2bfb0e307d486f
 T
 $src/main/java/pages/ContactPage.java,0\2\02ceabc3c90fd5d1abd6f8c4be61d51757892744
 T
 $src/test/java/tests/ContactTest.java,a\8\a8ffc3cc6d7de56028e63c6aac49015d90d760e2
-Y
-)src/main/java/pages/RegistrationPage.java,2\6\26e362d3e180a865912fb705ec7380dad20ae9ea
-f
-6src/test/java/tests_with_login/OpenNewAccountTest.java,a\d\ad527107af322b5069004d3210de040334d68a42
 \
 ,src/main/java/utilities/PropertyManager.java,8\3\8372b7dab372dfce4daaa6c7763550ed60f74fed
-Q
-!src/main/java/pages/HomePage.java,9\6\9655b2a35fae75d92697b79cda62632f93f33e6e
-T
-$src/test/java/suites/TestSuites.java,d\2\d2f4ee7640036c9fb71c13ef3c28cea0dd708fac
-V
-&src/test/java/tests/FailLoginTest.java,c\7\c78f8d5db4483226d489b6105f9974b32c0165d1
-V
-&src/main/java/methods/LoginMethod.java,b\0\b0180d243f2957cad21ae5ff159d767790a8dd05
