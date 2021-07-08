@@ -9,6 +9,7 @@ public class PropertyManager {
 
     private static String driverPath;
     private static String url;
+    private static String bad_password;
 
     // User data
     private static String firstName;
@@ -36,6 +37,7 @@ public class PropertyManager {
 
         driverPath = properties.getProperty("driverPath");
         url = properties.getProperty("url");
+        bad_password = properties.getProperty("bad_password");
 
         return instance;
     }
@@ -105,6 +107,10 @@ public class PropertyManager {
 
     public String getUrl() {
         return url;
+    }
+
+    public String getBadPassword() {
+        return bad_password;
     }
 
     public String getFirstName() {

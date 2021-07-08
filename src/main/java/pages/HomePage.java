@@ -29,6 +29,15 @@ public class HomePage extends BasePage {
         return this;
     }
 
+    public HomePage failLogin() {
+        loginMethod = new LoginMethod(driver);
+        loginMethod.login(
+                PropertyManager.getUserData().getUsername(),
+                PropertyManager.getInstance().getBadPassword()
+        );
+        return this;
+    }
+
     public HomePage verifyLogin() {
         loginMethod = new LoginMethod(driver);
         loginMethod.validateLogin("Accounts Overview");
@@ -38,6 +47,12 @@ public class HomePage extends BasePage {
     public HomePage verifyLogout() {
         logoutMethod = new LogoutMethod(driver);
         logoutMethod.verifyLogout("Forgot login info?");
+        return this;
+    }
+
+    public HomePage verifyFailLogin() {
+        loginMethod = new LoginMethod(driver);
+        loginMethod.validateLogin("Error!");
         return this;
     }
 }
