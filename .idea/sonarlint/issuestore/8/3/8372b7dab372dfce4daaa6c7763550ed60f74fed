@@ -1,0 +1,10 @@
+
+i
+java:S2095="NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(…èÈÿÿÿÿÿ
+h
+java:S2095 "MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(ª„ëÃùÿÿÿÿ
+c
+java:S2095T"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(¾× 
+Q	java:S107."<Method has 9 parameters, which is greater than 7 authorized.(ê¨²ò
+r
+java:S3008"WRename this field "bad_password" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š²ûØüÿÿÿÿ
