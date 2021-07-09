@@ -32,6 +32,7 @@ public class BasePage {
 
     public void writeText(By elementRef, String text) {
         waitElementVisibility(elementRef);
+        driver.findElement(elementRef).clear();
         driver.findElement(elementRef).sendKeys(text);
     }
 

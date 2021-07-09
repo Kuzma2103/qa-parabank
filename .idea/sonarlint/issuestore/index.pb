@@ -9,3 +9,15 @@ T
 $src/test/java/tests/ContactTest.java,a\8\a8ffc3cc6d7de56028e63c6aac49015d90d760e2
 \
 ,src/main/java/utilities/PropertyManager.java,8\3\8372b7dab372dfce4daaa6c7763550ed60f74fed
+^
+.src/main/java/methods/TransferFundsMethod.java,5\f\5f61a55c650f33b38f710c492f4b76794cccded4
+]
+-src/main/java/methods/RegistrationMethod.java,3\a\3acee641d720e28ab93778e36ec2ca8a451aa69e
+f
+6src/test/java/tests_with_login/OpenNewAccountTest.java,a\d\ad527107af322b5069004d3210de040334d68a42
+_
+/src/main/java/methods/OpenNewAccountMethod.java,c\f\cfcc1658b9efe9246f29d6bf8e0501df38686ff5
+Y
+)src/main/java/pages/RegistrationPage.java,2\6\26e362d3e180a865912fb705ec7380dad20ae9ea
+X
+(src/main/java/methods/BillPayMethod.java,1\5\154db800e727e21bd5936a9fafc8b1c6ec66ce73
