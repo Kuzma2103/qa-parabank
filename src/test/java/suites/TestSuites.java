@@ -17,6 +17,7 @@ import tests_with_login.*;
         TransferFundsTest.class,
         BillPayTest.class,
         UpdateProfileTest.class,
+        RequestLoanTest.class,
         ContactTest.class,
 })
 
