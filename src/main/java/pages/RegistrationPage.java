@@ -20,8 +20,9 @@ public class RegistrationPage extends BasePage {
         return this;
     }
 
-    public RegistrationPage validation() {
-        registrationMethod.validateRegister("Welcome " + PropertyManager.getUserData().getUsername());
+    public RegistrationPage validateRegistration()  {
+        registrationMethod = new RegistrationMethod(driver);
+        registrationMethod.validateRegister("Log Out");
         return this;
     }
 }

@@ -1,0 +1,7 @@
+
+‹
+java:S1319	"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ω“κίωÿÿÿÿ
+
+java:S1319	"oThe type of the "data" object should be an interface such as "List" rather than the implementation "ArrayList".(ω“κίωÿÿÿÿ
+P
+java:S1118":Add a private constructor to hide the implicit public one.(±‡Ηρ

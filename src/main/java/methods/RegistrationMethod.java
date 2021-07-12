@@ -27,8 +27,7 @@ public class RegistrationMethod extends BasePage {
     By confirmPasswordBy = By.id("repeatedPassword");
     By registerButtonBy = By.xpath("//*[@id=\"customerForm\"]/table/tbody/tr[13]/td[2]/input");
 
-    By titleBy = By.className("title");
-
+    By elementTextBy = By.xpath("//a[text()='Log Out']");
 
     public RegistrationMethod registerUser(ArrayList<String> registerData) {
         RegistrationData.registrationData(registerData);
@@ -49,8 +48,8 @@ public class RegistrationMethod extends BasePage {
     }
 
     public RegistrationMethod validateRegister(String expectedText) {
-        String title = readText(titleBy);
-        assertStringEquals(title, expectedText);
+        String textFromElement = readText(elementTextBy);
+        assertStringEquals(textFromElement, expectedText);
         return this;
     }
 }

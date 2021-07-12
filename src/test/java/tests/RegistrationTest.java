@@ -8,8 +8,9 @@ import utilities.PropertyManager;
 import java.util.ArrayList;
 
 public class RegistrationTest extends BaseTest {
+
     public RegistrationPage registrationPage;
-    public ArrayList<String> registerData = new ArrayList<>();
+    ArrayList<String> registerData = new ArrayList<>();
 
     @Test
     public void registrationTest() {
@@ -18,19 +19,19 @@ public class RegistrationTest extends BaseTest {
         registrationPage.registration(registerData);
 
         try {
-            PropertyManager.setUserData(
-                    registerData.get(0),
-                    registerData.get(1),
-                    registerData.get(2),
-                    registerData.get(3),
-                    registerData.get(4),
-                    registerData.get(5),
-                    registerData.get(7),
-                    registerData.get(8),
-                    registerData.get(9)
-            );
-            registrationPage.validation();
-            System.out.print("Everything is ok.");
+            registrationPage.validateRegistration();
+            System.out.print("User is registered.");
+
+            // Write properties to the configuration.properties file
+            PropertyManager.setProperty("firstName", registerData.get(0));
+            PropertyManager.setProperty("lastName", registerData.get(1));
+            PropertyManager.setProperty("address", registerData.get(2));
+            PropertyManager.setProperty("city", registerData.get(3));
+            PropertyManager.setProperty("state", registerData.get(4));
+            PropertyManager.setProperty("zipCode", registerData.get(5));
+            PropertyManager.setProperty("ssn", registerData.get(7));
+            PropertyManager.setProperty("userName", registerData.get(8));
+            PropertyManager.setProperty("password", registerData.get(9));
         } catch (Exception e) {
             Assert.fail("Something went wrong.");
         }

@@ -17,8 +17,8 @@ public class HomePage extends BasePage {
     public HomePage login() {
         loginMethod = new LoginMethod(driver);
         loginMethod.login(
-                PropertyManager.getUserData().getUsername(),
-                PropertyManager.getUserData().getPassword()
+                PropertyManager.getInstance().getUsername(),
+                PropertyManager.getInstance().getPassword()
         );
         return this;
     }
@@ -32,7 +32,7 @@ public class HomePage extends BasePage {
     public HomePage failLogin() {
         loginMethod = new LoginMethod(driver);
         loginMethod.login(
-                PropertyManager.getUserData().getUsername(),
+                PropertyManager.getInstance().getUsername(),
                 PropertyManager.getInstance().getBadPassword()
         );
         return this;

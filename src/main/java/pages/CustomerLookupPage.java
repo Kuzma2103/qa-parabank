@@ -17,13 +17,13 @@ public class CustomerLookupPage extends BasePage {
     public CustomerLookupPage findUserInfo() {
         method = new ForgotLoginMethod(driver);
         method.forgotLoginForExistUser(
-                PropertyManager.getUserData().getFirstName(),
-                PropertyManager.getUserData().getLastName(),
-                PropertyManager.getUserData().getAddress(),
-                PropertyManager.getUserData().getCity(),
-                PropertyManager.getUserData().getState(),
-                PropertyManager.getUserData().getZipCode(),
-                PropertyManager.getUserData().getSsn()
+                PropertyManager.getInstance().getFirstName(),
+                PropertyManager.getInstance().getLastName(),
+                PropertyManager.getInstance().getAddress(),
+                PropertyManager.getInstance().getCity(),
+                PropertyManager.getInstance().getState(),
+                PropertyManager.getInstance().getZipCode(),
+                PropertyManager.getInstance().getSSN()
         );
         return this;
     }

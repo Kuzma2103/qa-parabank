@@ -1,6 +1,5 @@
 package utilities;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.Properties;
@@ -19,7 +18,7 @@ public class PropertyManager {
     private static String state;
     private static String zipCode;
     private static String ssn;
-    private static String username;
+    private static String userName;
     private static String password;
 
     // Get the properties instance from the file configuration.properties
@@ -39,54 +38,7 @@ public class PropertyManager {
         url = properties.getProperty("url");
         bad_password = properties.getProperty("bad_password");
 
-        return instance;
-    }
-
-
-    public static void setUserData(
-            String firstName,
-            String lastName,
-            String address,
-            String city,
-            String state,
-            String zipCode,
-            String ssn,
-            String username,
-            String password
-    ) {
-        Properties properties = new Properties();
-        File file = new File("src/main/resources/registration.properties");
-
-        try {
-            FileOutputStream output = new FileOutputStream(file);
-            properties.setProperty("firstName", firstName);
-            properties.setProperty("lastName", lastName);
-            properties.setProperty("address", address);
-            properties.setProperty("city", city);
-            properties.setProperty("state", state);
-            properties.setProperty("zipCode", zipCode);
-            properties.setProperty("ssn", ssn);
-            properties.setProperty("username", username);
-            properties.setProperty("password", password);
-            properties.store(output, "Faker registration data");
-            output.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static PropertyManager getUserData() {
-
-        Properties properties = new Properties();
-        PropertyManager data = new PropertyManager();
-
-        try {
-            FileInputStream file = new FileInputStream("src/main/resources/registration.properties");
-            properties.load(file);
-        } catch (Exception e)  {
-            e.printStackTrace();
-        }
-
+        // User registration properties
         firstName = properties.getProperty("firstName");
         lastName = properties.getProperty("lastName");
         address = properties.getProperty("address");
@@ -94,11 +46,25 @@ public class PropertyManager {
         state = properties.getProperty("state");
         zipCode = properties.getProperty("zipCode");
         ssn = properties.getProperty("ssn");
-        username = properties.getProperty("username");
+        userName = properties.getProperty("userName");
         password = properties.getProperty("password");
 
-        return data;
+        return instance;
     }
+
+    public static void setProperty(String key, String value) {
+        Properties editProperties = new Properties();
+
+        try {
+            FileInputStream fileEdit = new FileInputStream("src/main/resources/configuration.properties");
+            editProperties.load(fileEdit);
+            editProperties.setProperty(key, value);
+            editProperties.store(new FileOutputStream("src/main/resources/configuration.properties"), null);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 
     // Getters
     public String getDriverPath() {
@@ -137,12 +103,12 @@ public class PropertyManager {
         return zipCode;
     }
 
-    public String getSsn() {
+    public String getSSN() {
         return ssn;
     }
 
     public String getUsername() {
-        return username;
+        return userName;
     }
 
     public String getPassword() {
